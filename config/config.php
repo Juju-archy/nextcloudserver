@@ -13,9 +13,9 @@ $CONFIG = [
     'nextcloud.meetfur.com',
   ],
 
-'datadirectory' => '/var/www/nextcloud/data',
+//'datadirectory' => '/var/www/nextcloud/data',
 
-'version' => '',
+'version' => '0.1',
 
 'dbtype' => 'pgsql',
 
