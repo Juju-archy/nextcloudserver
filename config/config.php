@@ -889,7 +889,7 @@ $CONFIG = [
  */
 'apps_paths' => [
 	[
-		'path'=> '~/app_5ddd8a04-cebf-45ef-a3dc-f3d4a4015067/apps',
+		'path'=> '/home/bas/app_5ddd8a04-cebf-45ef-a3dc-f3d4a4015067',
 		'url' => '/apps',
 		'writable' => true,
 	],
