@@ -889,7 +889,7 @@ $CONFIG = [
  */
 'apps_paths' => [
 	[
-		'path'=> '/var/www/nextcloud/apps',
+		'path'=> '~/app_5ddd8a04-cebf-45ef-a3dc-f3d4a4015067/apps',
 		'url' => '/apps',
 		'writable' => true,
 	],
