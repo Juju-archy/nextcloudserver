@@ -1743,7 +1743,7 @@ $CONFIG = [
  * Defaults to ``true``
  *
  */
-'files_external_allow_create_new_local' => true,
+'files_external_allow_create_new_local' => false,
 
 /**
  * Specifies how often the local filesystem (the Nextcloud data/ directory, and
