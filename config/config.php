@@ -11,6 +11,7 @@ $CONFIG = [
 'trusted_domains' =>
    [
     'nextcloud.meetfur.com',
+	'https://app-5ddd8a04-cebf-45ef-a3dc-f3d4a4015067.cleverapps.io/',
   ],
 
 //'datadirectory' => '/var/www/nextcloud/data',
@@ -50,21 +51,9 @@ $CONFIG = [
 	['user' => 'nextcloud', 'password' => 'password2', 'host' => 'replica2', 'dbname' => ''],
 ],*/
 
-/**
- * Add request id to the database query in a comment.
- *
- * This can be enabled to assist in mapping database logs to Nextcloud logs.
- */
 'db.log_request_id' => false,
 
 'installed' => false,
-
-/**
- * User Experience
- *
- * These optional parameters control some aspects of the user interface. Default
- * values, where present, are shown.
- */
 
 'default_language' => 'fr',
 
@@ -72,13 +61,6 @@ $CONFIG = [
 
 'default_locale' => 'fr_FR',
 
-/**
- * With this setting is possible to reduce the languages available in the
- * language chooser. The languages have to be set as array values using ISO_639-1
- * language codes such as ``en`` for English, ``de`` for German etc.
- *
- * For example: Set to ['de', 'fr'] to only allow German and French languages.
- */
 'reduce_to_languages' => [],
 
 'default_phone_region' => 'FR',
@@ -93,10 +75,9 @@ $CONFIG = [
 
 'allow_user_to_change_display_name' => true,
 
-'skeletondirectory' => '/path/to/nextcloud/core/skeleton',
+//'skeletondirectory' => '/path/to/nextcloud/core/skeleton',
 
-
-'templatedirectory' => '/path/to/nextcloud/templates',
+//'templatedirectory' => '/path/to/nextcloud/templates',
 
 /**
  * User session
@@ -262,7 +243,7 @@ $CONFIG = [
  * options to modify the mail texts with the theming app is not enough.
  * The class must extend  ``\OC\Mail\EMailTemplate``
  */
-'mail_template_class' => '\OC\Mail\EMailTemplate',
+//'mail_template_class' => '\OC\Mail\EMailTemplate',
 
 /**
  * Email will be sent by default with an HTML and a plain text body. This option
@@ -422,54 +403,6 @@ $CONFIG = [
  *
  * These parameters control the Deleted files app.
  */
-
-/**
- * If the trash bin app is enabled (default), this setting defines the policy
- * for when files and folders in the trash bin will be permanently deleted.
- * The app allows for two settings, a minimum time for trash bin retention,
- * and a maximum time for trash bin retention.
- *
- * Minimum time is the number of days a file will be kept, after which it
- * *may be* deleted. A file may be deleted after the minimum number of days
- * is expired if space is needed. The file will not be deleted if space is
- * not needed.
- *
- * Whether "space is needed" depends on whether a user quota is defined or not:
- *
- *  * If no user quota is defined, the available space on the Nextcloud data
- *    partition sets the limit for the trashbin
- *    (issues: see https://github.com/nextcloud/server/issues/28451).
- *  * If a user quota is defined, 50% of the user's remaining quota space sets
- *    the limit for the trashbin.
- *
- * Maximum time is the number of days at which it is *guaranteed
- * to be* deleted. There is no further dependency on the available space.
- *
- * Both minimum and maximum times can be set together to explicitly define
- * file and folder deletion. For migration purposes, this setting is installed
- * initially set to "auto", which is equivalent to the default setting in
- * Nextcloud.
- *
- * Available values (D1 and D2 are configurable numbers):
- *
- * * ``auto``
- *     default setting. keeps files and folders in the trash bin for 30 days
- *     and automatically deletes anytime after that if space is needed (note:
- *     files may not be deleted if space is not needed).
- * * ``D1, auto``
- *     keeps files and folders in the trash bin for D1+ days, delete anytime if
- *     space needed (note: files may not be deleted if space is not needed)
- * * ``auto, D2``
- *     delete all files in the trash bin that are older than D2 days
- *     automatically, delete other files anytime if space needed
- * * ``D1, D2``
- *     keep files and folders in the trash bin for at least D1 days and
- *     delete when exceeds D2 days (note: files will not be deleted automatically if space is needed)
- * * ``disabled``
- *     trash bin auto clean disabled, files and folders will be kept forever
- *
- * Defaults to ``auto``
- */
 'trashbin_retention_obligation' => 'auto',
 
 
@@ -477,39 +410,6 @@ $CONFIG = [
  * File versions
  *
  * These parameters control the Versions app.
- */
-
-/**
- * If the versions app is enabled (default), this setting defines the policy
- * for when versions will be permanently deleted.
- * The app allows for two settings, a minimum time for version retention,
- * and a maximum time for version retention.
- * Minimum time is the number of days a version will be kept, after which it
- * may be deleted. Maximum time is the number of days at which it is guaranteed
- * to be deleted.
- * Both minimum and maximum times can be set together to explicitly define
- * version deletion. For migration purposes, this setting is installed
- * initially set to "auto", which is equivalent to the default setting in
- * Nextcloud.
- *
- * Available values:
- *
- * * ``auto``
- *     default setting. Automatically expire versions according to expire
- *     rules. Please refer to :doc:`../configuration_files/file_versioning` for
- *     more information.
- * * ``D, auto``
- *     keep versions at least for D days, apply expiration rules to all versions
- *     that are older than D days
- * * ``auto, D``
- *     delete all versions that are older than D days automatically, delete
- *     other versions according to expire rules
- * * ``D1, D2``
- *     keep versions for at least D1 days and delete when exceeds D2 days
- * * ``disabled``
- *     versions auto clean disabled, versions will be kept forever
- *
- * Defaults to ``auto``
  */
 'versions_retention_obligation' => 'auto',
 
@@ -527,7 +427,7 @@ $CONFIG = [
  *
  * Defaults to ``false``
  */
-'appcodechecker' => true,
+'appcodechecker' => false,
 
 /**
  * Check if Nextcloud is up-to-date and shows a notification if a new version is
@@ -688,7 +588,7 @@ $CONFIG = [
  *
  * Defaults to ``2``
  */
-'loglevel' => 2,
+'loglevel' => 0,
 
 /**
  * Loglevel used by the frontend to start logging at. The same values as
@@ -697,7 +597,7 @@ $CONFIG = [
  *
  * Defaults to ``2``
  */
-'loglevel_frontend' => 2,
+'loglevel_frontend' => 0,
 
 /**
  * Loglevel used by the dirty database query detection. Useful to identify
@@ -785,7 +685,7 @@ $CONFIG = [
  *
  * Defaults to ``UTC``
  */
-'logtimezone' => 'Europe/Berlin',
+'logtimezone' => 'Europe/Paris',
 
 /**
  * Append all database queries and parameters to the log file. Use this only for
@@ -889,7 +789,7 @@ $CONFIG = [
  */
 'apps_paths' => [
 	[
-		'path'=> '/home/bas/app_5ddd8a04-cebf-45ef-a3dc-f3d4a4015067',
+		'path'=> '/home/bas/app_5ddd8a04-cebf-45ef-a3dc-f3d4a4015067/apps',
 		'url' => '/apps',
 		'writable' => true,
 	],
@@ -1167,9 +1067,9 @@ $CONFIG = [
   *
  * Defaults to an empty array.
  */
-'openssl' => [
+/**'openssl' => [
 	'config' => '/absolute/location/of/openssl.cnf',
-],
+],*/
 
 /**
  * Memory caching backend configuration
@@ -1196,7 +1096,7 @@ $CONFIG = [
  *
  * Defaults to ``none``
  */
-'memcache.local' => '\OC\Memcache\APCu',
+'memcache.local' => 'none',
 
 /**
  * Memory caching backend for distributed data
@@ -1206,7 +1106,7 @@ $CONFIG = [
  *
  * Defaults to ``none``
  */
-'memcache.distributed' => '\OC\Memcache\Memcached',
+'memcache.distributed' => 'none',
 
 /**
  * Connection details for redis to use for memory caching in a single server configuration.
@@ -1218,7 +1118,7 @@ $CONFIG = [
  * We also support redis SSL/TLS encryption as of version 6.
  * See https://redis.io/topics/encryption for more information.
  */
-'redis' => [
+/** 'redis' => [
 	'host' => 'localhost', // can also be a unix domain socket: '/tmp/redis.sock'
 	'port' => 6379,
 	'timeout' => 0.0,
@@ -1233,7 +1133,7 @@ $CONFIG = [
 		'local_pk' => '/certs/redis.key',
 		'cafile' => '/certs/ca.crt'
 	]
-],
+],*/
 
 /**
  * Connection details for a Redis Cluster.
@@ -1257,7 +1157,7 @@ $CONFIG = [
  * Authentication works with phpredis version 4.2.1+. See
  * https://github.com/phpredis/phpredis/commit/c5994f2a42b8a348af92d3acb4edff1328ad8ce1
  */
-'redis.cluster' => [
+/*'redis.cluster' => [
 	'seeds' => [ // provide some or all of the cluster servers to bootstrap discovery, port required
 		'localhost:7000',
 		'localhost:7001',
@@ -1274,25 +1174,25 @@ $CONFIG = [
 		'local_pk' => '/certs/redis.key',
 		'cafile' => '/certs/ca.crt'
 	]
-],
+],*/
 
 
 /**
  * Server details for one or more memcached servers to use for memory caching.
  */
-'memcached_servers' => [
+/*'memcached_servers' => [
 	// hostname, port and optional weight
 	// or path and port 0 for unix socket. Also see:
 	// https://www.php.net/manual/en/memcached.addservers.php
 	// https://www.php.net/manual/en/memcached.addserver.php
 	['localhost', 11211],
 	//array('other.host.local', 11211),
-],
+],*/
 
 /**
  * Connection options for memcached
  */
-'memcached_options' => [
+/*'memcached_options' => [
 	// Set timeouts to 50ms
 	\Memcached::OPT_CONNECT_TIMEOUT => 50,
 	\Memcached::OPT_RETRY_TIMEOUT =>   50,
@@ -1311,7 +1211,7 @@ $CONFIG = [
 
 	// Binary serializer vill be enabled if the igbinary PECL module is available
 	//\Memcached::OPT_SERIALIZER => \Memcached::SERIALIZER_IGBINARY,
-],
+],*/
 
 
 /**
@@ -1354,7 +1254,7 @@ $CONFIG = [
  * to be fetched in addition to any requested file.
  *
  */
-'objectstore' => [
+/*'objectstore' => [
 	'class' => 'OC\\Files\\ObjectStore\\Swift',
 	'arguments' => [
 		// trystack will use your facebook id as the username
@@ -1382,12 +1282,12 @@ $CONFIG = [
 		// The Interface / url Type, optional
 		'urlType' => 'internal'
 	],
-],
+],*/
 
 /**
  * To use swift V3
  */
-'objectstore' => [
+/*'objectstore' => [
 	'class' => 'OC\\Files\\ObjectStore\\Swift',
 	'arguments' => [
 		'autocreate' => true,
@@ -1412,7 +1312,7 @@ $CONFIG = [
 		'url' => 'http://yourswifthost:5000/v3',
 		'bucket' => 'nextcloud',
 	],
-],
+],*/
 
 /**
  * If this is set to true and a multibucket object store is configured then
@@ -1578,19 +1478,19 @@ $CONFIG = [
  * The standard behavior here is different from the MySQL/MariaDB CLI client, which
  * does not verify the server cert except --ssl-verify-server-cert is passed manually.
  */
-'dbdriveroptions' => [
+/*'dbdriveroptions' => [
 	PDO::MYSQL_ATTR_SSL_CA => '/file/path/to/ca_cert.pem',
 	PDO::MYSQL_ATTR_SSL_KEY => '/file/path/to/mysql-client-key.pem',
 	PDO::MYSQL_ATTR_SSL_CERT => '/file/path/to/mysql-client-cert.pem',
 	PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false,
 	PDO::MYSQL_ATTR_INIT_COMMAND => 'SET wait_timeout = 28800'
-],
+],*/
 
 /**
  * sqlite3 journal mode can be specified using this configuration parameter -
  * can be 'WAL' or 'DELETE' see for more details https://www.sqlite.org/wal.html
  */
-'sqlite.journal_mode' => 'DELETE',
+//'sqlite.journal_mode' => 'DELETE',
 
 /**
  * During setup, if requirements are met (see below), this setting is set to true
@@ -1658,10 +1558,7 @@ $CONFIG = [
  *  - pgsql (PostgreSQL)
  */
 'supportedDatabases' => [
-	'sqlite',
-	'mysql',
-	'pgsql',
-	'oci',
+	'pgsql'
 ],
 
 /**
@@ -1910,7 +1807,7 @@ $CONFIG = [
  *
  * Defaults to an empty array.
  */
-'trusted_proxies' => ['203.0.113.45', '198.51.100.128', '192.168.2.0/24'],
+'trusted_proxies' => [],
 
 /**
  * Headers that should be trusted as client IP address in combination with
@@ -1932,7 +1829,7 @@ $CONFIG = [
  *
  * Defaults to an empty array.
  */
-'allowed_admin_ranges' => ['192.0.2.42/32', '233.252.0.0/24', '2001:db8::13:37/64'],
+'allowed_admin_ranges' => [],
 
 /**
  * max file size for animating gifs on public-sharing-site.
@@ -1943,7 +1840,7 @@ $CONFIG = [
  *
  * Defaults to ``10`` megabytes
  */
-'max_filesize_animated_gifs_public_sharing' => 10,
+'max_filesize_animated_gifs_public_sharing' => 50,
 
 
 /**
@@ -1978,7 +1875,7 @@ $CONFIG = [
  *
  * Defaults to ``none``
  */
-'memcache.locking' => '\\OC\\Memcache\\Redis',
+'memcache.locking' => 'none',
 
 /**
  * Enable locking debug logging
