@@ -84,9 +84,9 @@ $CONFIG = [
 
 'allow_user_to_change_display_name' => true,
 
-'skeletondirectory' => '/home/bas/app_5ddd8a04-cebf-45ef-a3dc-f3d4a4015067/core/skeleton',
+'skeletondirectory' => '/home/bas/app_5ddd8a04-cebf-45ef-a3dc-f3d4a4015067/core/skeleton/',
 
-'templatedirectory' => '/home/bas/app_5ddd8a04-cebf-45ef-a3dc-f3d4a4015067/templates',
+'templatedirectory' => '/home/bas/app_5ddd8a04-cebf-45ef-a3dc-f3d4a4015067/apps/theming/templates/',
 
 /**
  * User session
@@ -1424,7 +1424,7 @@ $CONFIG = [
  *
  * Defaults to the theming app which is shipped since Nextcloud 9
  */
-'theme' => '/home/bas/app_5ddd8a04-cebf-45ef-a3dc-f3d4a4015067/apps/theming/css/default.css',
+'theme' => '/home/bas/app_5ddd8a04-cebf-45ef-a3dc-f3d4a4015067/apps/theming/css/',
 
 /**
  * Enforce the user theme. This will disable the user theming settings
