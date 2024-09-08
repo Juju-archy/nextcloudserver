@@ -84,9 +84,9 @@ $CONFIG = [
 
 'allow_user_to_change_display_name' => true,
 
-'skeletondirectory' => '/path/to/nextcloud/core/skeleton',
+'skeletondirectory' => '/home/bas/app_5ddd8a04-cebf-45ef-a3dc-f3d4a4015067/core/skeleton',
 
-'templatedirectory' => '/path/to/nextcloud/templates',
+'templatedirectory' => '/home/bas/app_5ddd8a04-cebf-45ef-a3dc-f3d4a4015067/templates',
 
 /**
  * User session
