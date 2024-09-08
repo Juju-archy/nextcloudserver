@@ -1424,7 +1424,7 @@ $CONFIG = [
  *
  * Defaults to the theming app which is shipped since Nextcloud 9
  */
-'theme' => '/home/bas/app_5ddd8a04-cebf-45ef-a3dc-f3d4a4015067/themes/',
+'theme' => '/home/bas/app_5ddd8a04-cebf-45ef-a3dc-f3d4a4015067/apps/theming/css/default.css',
 
 /**
  * Enforce the user theme. This will disable the user theming settings
