@@ -62,7 +62,7 @@ $CONFIG = [
 
 'db.log_request_id' => false,
 
-'installed' => true,
+'installed' => false,
 
 'default_language' => 'fr',
 
