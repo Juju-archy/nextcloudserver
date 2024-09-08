@@ -23,7 +23,7 @@ $CONFIG = [
 	'91.208.207.214',
   ],
 
-//'datadirectory' => '/var/www/nextcloud/data',
+'datadirectory' => '/var/www/nextcloud/data',
 
 'version' => '0.1',
 
@@ -84,9 +84,9 @@ $CONFIG = [
 
 'allow_user_to_change_display_name' => true,
 
-//'skeletondirectory' => '/path/to/nextcloud/core/skeleton',
+'skeletondirectory' => '/path/to/nextcloud/core/skeleton',
 
-//'templatedirectory' => '/path/to/nextcloud/templates',
+'templatedirectory' => '/path/to/nextcloud/templates',
 
 /**
  * User session
@@ -146,188 +146,48 @@ $CONFIG = [
  * resets.
  */
 
-/**
- * The return address that you want to appear on emails sent by the Nextcloud
- * server, for example ``nc-admin@example.com``, substituting your own domain,
- * of course.
- */
 'mail_domain' => 'meetfur.com',
 
-/**
- * FROM address that overrides the built-in ``sharing-noreply`` and
- * ``lostpassword-noreply`` FROM addresses.
- *
- * Defaults to different from addresses depending on the feature.
- */
 'mail_from_address' => 'nextcloud',
 
-/**
- * Enable SMTP class debugging.
- * NOTE: ``loglevel`` will likely need to be adjusted too. See docs: 
- *   https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/email_configuration.html#enabling-debug-mode
- *
- * Defaults to ``false``
- */
 'mail_smtpdebug' => false,
 
-/**
- * Which mode to use for sending mail: ``sendmail``, ``smtp`` or ``qmail``.
- *
- * If you are using local or remote SMTP, set this to ``smtp``.
- *
- * For the ``sendmail`` option you need an installed and working email system on
- * the server, with ``/usr/sbin/sendmail`` installed on your Unix system.
- *
- * For ``qmail`` the binary is /var/qmail/bin/sendmail, and it must be installed
- * on your Unix system.
- *
- * Defaults to ``smtp``
- */
 'mail_smtpmode' => 'smtp',
 
-/**
- * This depends on ``mail_smtpmode``. Specify the IP address of your mail
- * server host. This may contain multiple hosts separated by a semicolon. If
- * you need to specify the port number append it to the IP address separated by
- * a colon, like this: ``127.0.0.1:24``.
- *
- * Defaults to ``127.0.0.1``
- */
 'mail_smtphost' => '127.0.0.1',
 
-/**
- * This depends on ``mail_smtpmode``. Specify the port for sending mail.
- *
- * Defaults to ``25``
- */
 'mail_smtpport' => 25,
 
-/**
- * This depends on ``mail_smtpmode``. This sets the SMTP server timeout, in
- * seconds. You may need to increase this if you are running an anti-malware or
- * spam scanner.
- *
- * Defaults to ``10`` seconds
- */
 'mail_smtptimeout' => 10,
 
-/**
- * This depends on ``mail_smtpmode``. Specify ``ssl`` when you are using SSL/TLS. Any other value will be ignored.
- *
- * If the server advertises STARTTLS capabilities, they might be used, but they cannot be enforced by
- * this config option.
- *
- * 
- * Defaults to ``''`` (empty string)
- */
 'mail_smtpsecure' => '',
 
-/**
- *
- * This depends on ``mail_smtpmode``. Change this to ``true`` if your mail
- * server requires authentication.
- *
- * Defaults to ``false``
- */
 'mail_smtpauth' => false,
 
-/**
- * This depends on ``mail_smtpauth``. Specify the username for authenticating to
- * the SMTP server.
- *
- * Defaults to ``''`` (empty string)
- */
 'mail_smtpname' => '',
 
-/**
- * This depends on ``mail_smtpauth``. Specify the password for authenticating to
- * the SMTP server.
- *
- * Default to ``''`` (empty string)
- */
 'mail_smtppassword' => '',
 
-/**
- * Replaces the default mail template layout. This can be utilized if the
- * options to modify the mail texts with the theming app is not enough.
- * The class must extend  ``\OC\Mail\EMailTemplate``
- */
-//'mail_template_class' => '\OC\Mail\EMailTemplate',
+'mail_template_class' => '\OC\Mail\EMailTemplate',
 
-/**
- * Email will be sent by default with an HTML and a plain text body. This option
- * allows to only send plain text emails.
- */
 'mail_send_plaintext_only' => false,
 
-/**
- * This depends on ``mail_smtpmode``. Array of additional streams options that
- * will be passed to underlying Swift mailer implementation.
- * Defaults to an empty array.
- */
 'mail_smtpstreamoptions' => [],
 
-/**
- * Which mode is used for sendmail/qmail: ``smtp`` or ``pipe``.
- *
- * For ``smtp`` the sendmail binary is started with the parameter ``-bs``:
- *   - Use the SMTP protocol on standard input and output.
- *
- * For ``pipe`` the binary is started with the parameters ``-t``:
- *   - Read message from STDIN and extract recipients.
- *
- * Defaults to ``smtp``
- */
 'mail_sendmailmode' => 'smtp',
 
 /**
  * Proxy Configurations
  */
 
-/**
- * The automatic hostname detection of Nextcloud can fail in certain reverse
- * proxy and CLI/cron situations. This option allows you to manually override
- * the automatic detection; for example ``www.example.com``, or specify the port
- * ``www.example.com:8080``.
- */
 'overwritehost' => '',
 
-/**
- * When generating URLs, Nextcloud attempts to detect whether the server is
- * accessed via ``https`` or ``http``. However, if Nextcloud is behind a proxy
- * and the proxy handles the ``https`` calls, Nextcloud would not know that
- * ``ssl`` is in use, which would result in incorrect URLs being generated.
- * Valid values are ``http`` and ``https``.
- */
 'overwriteprotocol' => '',
 
-/**
- * Nextcloud attempts to detect the webroot for generating URLs automatically.
- * For example, if ``www.example.com/nextcloud`` is the URL pointing to the
- * Nextcloud instance, the webroot is ``/nextcloud``. When proxies are in use,
- * it may be difficult for Nextcloud to detect this parameter, resulting in
- * invalid URLs.
- */
 'overwritewebroot' => '',
 
-/**
- * This option allows you to define a manual override condition as a regular
- * expression for the remote IP address. For example, defining a range of IP
- * addresses starting with ``10.0.0.`` and ending with 1 to 3:
- * ``^10\.0\.0\.[1-3]$``
- *
- * Defaults to ``''`` (empty string)
- */
 'overwritecondaddr' => '',
 
-/**
- * Use this configuration parameter to specify the base URL for any URLs which
- * are generated within Nextcloud using any kind of command line tools (cron or
- * occ). The value should contain the full base URL:
- * ``https://www.example.com/nextcloud``
- *
- * Defaults to ``''`` (empty string)
- */
 'overwrite.cli.url' => '',
 
 /**
@@ -368,84 +228,24 @@ $CONFIG = [
  */
 'htaccess.IgnoreFrontController' => false,
 
-/**
- * The URL of your proxy server, for example ``proxy.example.com:8081``.
- *
- * Note: Guzzle (the http library used by Nextcloud) is reading the environment
- * variables HTTP_PROXY (only for cli request), HTTPS_PROXY, and NO_PROXY by default.
- *
- * If you configure proxy with Nextcloud any default configuration by Guzzle
- * is overwritten. Make sure to set ``proxyexclude`` accordingly if necessary.
- *
- * Defaults to ``''`` (empty string)
- */
 'proxy' => '',
 
-/**
- * The optional authentication for the proxy to use to connect to the internet.
- * The format is: ``username:password``.
- *
- * Defaults to ``''`` (empty string)
- */
 'proxyuserpwd' => '',
 
-/**
- * List of host names that should not be proxied to.
- * For example: ``['.mit.edu', 'foo.com']``.
- *
- * Hint: Use something like ``explode(',', getenv('NO_PROXY'))`` to sync this
- * value with the global NO_PROXY option.
- *
- * Defaults to empty array.
- */
 'proxyexclude' => [],
 
-/**
- * Allow remote servers with local addresses e.g. in federated shares, webcal services and more
- *
- * Defaults to false
- */
 'allow_local_remote_servers' => true,
 
 /**
  * Deleted Items (trash bin)
- *
  * These parameters control the Deleted files app.
  */
 'trashbin_retention_obligation' => 'auto',
 
-
-/**
- * File versions
- *
- * These parameters control the Versions app.
- */
 'versions_retention_obligation' => 'auto',
 
-/**
- * Nextcloud Verifications
- *
- * Nextcloud performs several verification checks. There are two options,
- * ``true`` and ``false``.
- */
-
-/**
- * Checks an app before install whether it uses private APIs instead of the
- * proper public APIs. If this is set to true it will only allow to install or
- * enable apps that pass this check.
- *
- * Defaults to ``false``
- */
 'appcodechecker' => false,
 
-/**
- * Check if Nextcloud is up-to-date and shows a notification if a new version is
- * available. It sends current version, php version, installation and last update
- * time and release channel to the updater server which responds with the latest
- * available version based on those metrics.
- *
- * Defaults to ``true``
- */
 'updatechecker' => true,
 
 /**
@@ -497,39 +297,13 @@ $CONFIG = [
 	'www.edri.org'
 ],
 
-/**
- * Allows Nextcloud to verify a working .well-known URL redirects. This is done
- * by attempting to make a request from JS to
- * https://your-domain.com/.well-known/caldav/
- *
- * Defaults to ``true``
- */
 'check_for_working_wellknown_setup' => true,
 
-/**
- * This is a crucial security check on Apache servers that should always be set
- * to ``true``. This verifies that the ``.htaccess`` file is writable and works.
- * If it is not, then any options controlled by ``.htaccess``, such as large
- * file uploads, will not work. It also runs checks on the ``data/`` directory,
- * which verifies that it can't be accessed directly through the Web server.
- *
- * Defaults to ``true``
- */
 'check_for_working_htaccess' => true,
 
-/**
- * In rare setups (e.g. on Openshift or Docker on Windows) the permissions check
- * might block the installation while the underlying system offers no means to
- * "correct" the permissions. In this case, set the value to false.
- *
- * In regular cases, if issues with permissions are encountered they should be
- * adjusted accordingly. Changing the flag is discouraged.
- *
- * Defaults to ``true``
- */
 'check_data_directory_permissions' => true,
 
-/**
+/** ---------------------------Very important !!!! --------------------------------------------------
  * In certain environments it is desired to have a read-only configuration file.
  * When this switch is set to ``true``, writing to the config file will be
  * forbidden. Therefore, it will not be possible to configure all options via
@@ -798,7 +572,7 @@ $CONFIG = [
  */
 'apps_paths' => [
 	[
-		'path'=> '/home/bas/app_5ddd8a04-cebf-45ef-a3dc-f3d4a4015067/apps',
+		'path'=> '/home/bas/app_5ddd8a04-cebf-45ef-a3dc-f3d4a4015067/',
 		'url' => '/apps',
 		'writable' => true,
 	],
