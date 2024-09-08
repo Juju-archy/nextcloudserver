@@ -1355,7 +1355,7 @@ $CONFIG = [
  * tmp directory, by setting the TMP, TMPDIR, and TEMP variables to the required directories.
  * On top of that you might be required to grant additional permissions in AppArmor or SELinux.
  */
-'tempdirectory' => '/tmp/nextcloudtemp',
+'tempdirectory' => '/tmp/',
 
 /**
  * Override where Nextcloud stores update files while updating. Useful in situations
