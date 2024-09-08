@@ -514,8 +514,8 @@ $CONFIG = [
  * - iOS client app id: ``1125420102``
  * - F-Droid client: ``https://f-droid.org/packages/com.nextcloud.client/``
  */
-'customclient_desktop' =>
-	'https://nextcloud.com/install/#install-clients',
+//'customclient_desktop' =>
+/*	'https://nextcloud.com/install/#install-clients',
 'customclient_android' =>
 	'https://play.google.com/store/apps/details?id=com.nextcloud.client',
 'customclient_ios' =>
@@ -523,7 +523,7 @@ $CONFIG = [
 'customclient_ios_appid' =>
 		'1125420102',
 'customclient_fdroid' =>
-	'https://f-droid.org/packages/com.nextcloud.client/',
+	'https://f-droid.org/packages/com.nextcloud.client/',*/
 /**
  * Apps
  *
@@ -1424,7 +1424,7 @@ $CONFIG = [
  *
  * Defaults to the theming app which is shipped since Nextcloud 9
  */
-'theme' => '/home/bas/app_5ddd8a04-cebf-45ef-a3dc-f3d4a4015067/apps/theming/css/',
+'theme' => '/home/bas/app_5ddd8a04-cebf-45ef-a3dc-f3d4a4015067/apps/theming/css',
 
 /**
  * Enforce the user theme. This will disable the user theming settings
