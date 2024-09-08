@@ -1355,7 +1355,7 @@ $CONFIG = [
  * tmp directory, by setting the TMP, TMPDIR, and TEMP variables to the required directories.
  * On top of that you might be required to grant additional permissions in AppArmor or SELinux.
  */
-'tempdirectory' => '/tmp/',
+'tempdirectory' => '/tmp/nextcloudtemp',
 
 /**
  * Override where Nextcloud stores update files while updating. Useful in situations
@@ -1424,7 +1424,7 @@ $CONFIG = [
  *
  * Defaults to the theming app which is shipped since Nextcloud 9
  */
-'theme' => '/home/bas/app_5ddd8a04-cebf-45ef-a3dc-f3d4a4015067/themes',
+'theme' => '/home/bas/app_5ddd8a04-cebf-45ef-a3dc-f3d4a4015067/apps/theming/css',
 
 /**
  * Enforce the user theme. This will disable the user theming settings
