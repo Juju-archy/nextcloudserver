@@ -6,14 +6,14 @@ $CONFIG = array (
   array (
     0 => 
     array (
-      'path' => '/var/www/html/apps',
+      'path' => '/var/www/html/app_5ddd8a04-cebf-45ef-a3dc-f3d4a4015067/apps',
       'url' => '/apps',
       'writable' => false,
     ),
     1 => 
     array (
-      'path' => '/var/www/html/custom_apps',
-      'url' => '/custom_apps',
+      'path' => '/var/www/html/app_5ddd8a04-cebf-45ef-a3dc-f3d4a4015067/apps',
+      'url' => '/apps',
       'writable' => true,
     ),
   ),
@@ -24,6 +24,7 @@ $CONFIG = array (
   'trusted_domains' => 
   array (
     0 => 'app-368a6fdf-e902-4e34-abea-a17e0d462556.cleverapps.io',
+    1 => 'nextcloud.meetfur.com',
   ),
   'datadirectory' => '/var/www/html/data',
   'dbtype' => 'pgsql',
