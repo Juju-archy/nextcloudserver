@@ -12,8 +12,8 @@ $CONFIG = array (
     ),
     1 => 
     array (
-      'path' => '/var/www/html/custom_apps',
-      'url' => '/custom_apps',
+      'path' => '/var/www/html/apps',
+      'url' => '/apps',
       'writable' => true,
     ),
   ),
