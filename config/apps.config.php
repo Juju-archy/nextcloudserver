@@ -4,10 +4,10 @@ $CONFIG = array (
       0 => array (
               'path'     => OC::$SERVERROOT.'/apps',
               'url'      => '/apps',
-              'writable' => true,
+              'writable' => false,
       ),
       1 => array (
-              'path'     => OC::$SERVERROOT.'/apps',
+              'path'     => OC::$SERVERROOT.'/customs_apps',
               'url'      => '/custom_apps',
               'writable' => true,
       ),
